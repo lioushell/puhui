@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" />
+    <title>岁末狂欢 感谢有"粒"</title>
+    <base href="./">
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script type="text/javascript" src="js/snow.js"></script>
+</head>
+<!--游戏背景-->
+<body>
+    <!--加载页-->
+    <div id="loading" class="loading-bg">
+        <div id="progressBar" class="progress-bar">
+            <div id="btn-progressbar" class="jindutiao"></div>
+        </div>
+    </div>
+<div id="bodyBg" class="body-bg">
+    <!--背景音乐-->
+    <a href="javascript:void(0);" class="m-music m-play">
+        <i class="icon-music"></i>
+        <audio src="images/music.mp3" id="J_audio" autoplay="autoplay" loop="loop"></audio>
+    </a>
+    <!--雪花特效-->
+    <canvas id="canvas" class="snow-canvas"></canvas>
+    <!--主页-->
+    <div id="gameIndex" class="index-bg">
+        <!--游戏说明按钮-->
+        <a id="btngameRule" class="btn-game-rule" href="javascript:void(0);">
+            <img src="images/gameRule.png" />
+        </a>
+<!--        &lt;!&ndash;游戏活动时间&ndash;&gt;
+        <div class="activity-time">
+            <p>活动时间</p>
+            <p>2015年12月24日-12月31日</p>
+        </div>-->
+        <!--游戏主角-->
+        <div class="game-cont">
+            <img class="cartoon-car2" src="images/car2.png" />
+            <img class="cartoon-boy shakehand" src="images/child.png" />
+            <img class="cartoon-car1" src="images/car1.png" />
+            <!--输入口令-->
+            <div id="choujiang" class="write-info">
+                <span>点击抽奖</span>
+                <!--<input id="kouling" name="kouling" type="text" placeholder="请输入口令"/>-->
+            </div>
+        </div>
+        <!--圣诞树-->
+        <div id="christmasTrees" class="christmas-tree">
+            <img id="christmasGift" class="christmas-gift" src="images/christmasGift.png" alt=""/>
+        </div>
+        <!--按钮：我的奖品-->
+        <a id="myPrize" class="btn-prize" href="javascript:void(0);">
+            <img src="images/btn-myprize.png"/>
+        </a>
+    </div>
+
+
+    <!--游戏规则页-->
+    <div id="gameRules" class="game-rules">
+        <!--关闭按钮-->
+        <a id="btn-ruleClose" class="btn-close" href="javascript:void(0);">
+            <img src="images/btn-close.png"/>
+        </a>
+        <!--游戏规则内容-->
+        <div id="ruleText" class="rule-text rule-prize">
+            <img class="ico-gamerule mb-3p" src="images/ico-gamerule.png"/>
+            <section id="gameRuletext" class="game-rule-text prize-area">
+<!--                <h2>1) 活动时间</h2>
+                <p class="mb-10">2015年12月24日-12月31日</p>
+                <h2>2) 活动规则：</h2>
+                <p class="mb-10">您任意购买颗粒装一袋，即可参与抽奖，扫码进入抽奖，随机获得奖品（以微信卡券形式出现）</p>
+                <h2>3) 游戏奖品</h2>
+                <ul id="prizeList" class="prize-list mb-10">
+                    <li>
+                        <span class="prize-level title">等级</span>
+                        <span class="prize-name title" style="text-align: center;">礼品名称</span>
+                        <span class="prize-count title">总量</span>
+                    </li>
+                    <li>
+                        <span class="prize-level">一等奖</span>
+                        <span class="prize-name">周黑鸭购物卡（100元）一张</span>
+                        <span class="prize-count">221</span>
+                    </li>
+                    <li>
+                        <span class="prize-level">二等奖</span>
+                        <span class="prize-name">周黑鸭购物卡（50元）一张	</span>
+                        <span class="prize-count">442</span>
+                    </li>
+                    <li>
+                        <span class="prize-level">三等奖</span>
+                        <span class="prize-name">周黑颗粒装产品</span>
+                        <span class="prize-count">1105</span>
+                    </li>
+                    <li>
+                        <span class="prize-level">参与奖</span>
+                        <span class="prize-name">周黑鸭微商城5元抵用券</span>
+                        <span class="prize-count">18122</span>
+                    </li>
+                </ul>
+                <h2>4) 活动城市</h2>
+                <p class="mb-10">上海、杭州、南京、苏州、郑州、长沙、广州、东莞、重庆周黑鸭线下门店</p>
+                <p class="mt-10 mb-10 color28"><b>注：数量有限，领完即止</b></p>-->
+                <!--<div class="cont-tips">
+                    <b>武汉市</b>
+                    <h4>周黑鸭江汉路步行街店</h4>
+                    <p>武汉市江汉区江汉路中心百货对面</p>
+                    <h4>周黑鸭光谷鲁巷三店</h4>
+                    <p>武汉市洪山区光谷步行街星巴克隔壁</p>
+                    <b>郑州市</b>
+                    <h4>周黑鸭人民路店</h4>
+                    <p>郑州市人民路与二七路交汇处二七广场天桥下（永乐电器旁）</p>
+                    <h4>周黑鸭中原万达店</h4>
+                    <p>郑州市中原区中原中路万达广场-1楼沃尔玛超市出口处</p>
+                    <b>广州市</b>
+                    <h4>周黑鸭天河南一路店</h4>
+                    <p>广州天河区天河南一路96号101-3铺</p>
+                    <h4>周黑鸭天河直通车店</h4>
+                    <p>广州天河区体育西路54号天河直通车商业广场负一层1B008号</p>
+                    <b>上海市</b>
+                    <h4>周黑鸭五莲路店</h4>
+                    <p>上海市浦东新区五莲路707号1层近张杨北路</p>
+                    <b>南京市</b>
+                    <h4>周黑鸭新街口1店</h4>
+                    <p>南京市地铁二号线新街口站新E32号商铺</p>
+                    <b>长沙市</b>
+                    <h4>周黑鸭步行街二店</h4>
+                    <p>长沙市天心区黄兴南路280-282号对面</p>
+                    <b>重庆市</b>
+                    <h4>周黑鸭南坪万达广场店</h4>
+                    <p>重庆市南岸区南坪街道珊瑚路5号3栋1层8号</p>
+                    <h4>周黑鸭龙湖时代天街店</h4>
+                    <p>重庆市渝中区长江二路174号地铁-UG-C15号商</p>
+                </div>-->
+            </section>
+        </div>
+    </div>
+
+
+    <!--奖品领取页-->
+    <div id="getPrize" class="get-prize huibg">
+        <!--奖品解释信息-->
+        <!--<div id="prizeExplain" class="prize-explain">奖品图片仅供参考，以实物为准</div>-->
+        <!--领奖背景-->
+        <div id="twinkle" class="twinkle-shine"></div>
+        <!--奖品列表-->
+        <div  id="showPrize" class="show-prize">
+            <div class="prizeText-cont none">恭喜你，您的运气真是太好了，获得了<b>一等奖-周黑鸭购物卡（100元）</b>一张！</div>
+            <div class="prizeText-cont">恭喜你，您的运气真是太好了，获得了<b>二等奖-周黑鸭购物卡（50元）</b>一张！</div>
+            <div class="prizeText-cont none">恭喜你，您的运气真是太好了，获得了<b>三等奖-周黑鸭颗粒产品</b>一袋！</div>
+            <div class="prizeText-cont none">恭喜你，您的运气真是太好了，获得了<b>参与奖-周黑鸭微商城5元抵用券</b>一张！</div>
+        </div>
+        <!--奖品提示信息-->
+<!--        <div id=prizeCont" class="prize-cont">
+            恭喜你获得了<span id="prizeName">U盘</span>，感谢有"粒"
+        </div>-->
+        <!--按钮：立即领取-->
+        <a id="nowgetPrize" class="btn-getprize" href="javascript:void(0);">
+            <img src="images/btn-nowget.png"/>
+        </a>
+    </div>
+
+
+    <!--告知好友页-->
+    <div id="shareFriend" class="share-friend huibg">
+        <img class="btn-snowman" src="images/btn-snowman.png"/>
+        <div id="" class="prize-text">
+            <div class="prizeText-cont">
+                兑换券我们已经发放在您的微信卡包中
+                <!--兑奖券已经成功放入您的<a id="weixinbag" href="javascript:void(0);">微信卡包</a>中，请您到位于南京、北京、武汉、郑州、长沙、深圳、重庆的线下实体店中凭券领取。-->
+                <!--<div class="cont-tips">
+                    <b>北京</b>
+                    <h4>周黑鸭大兴宜家店</h4>
+                    <p>北京市大兴宜家西红门荟聚购物中心</p>
+                    <h4>周黑鸭马连道家乐福店</h4>
+                    <p>北京市西城区马连道家乐福11号1层MLD102</p>
+                    <b>武汉市</b>
+                    <h4>周黑鸭江汉路步行街店</h4>
+                    <p>武汉市江汉区江汉路中心百货对面</p>
+                    <h4>周黑鸭光谷鲁巷三店</h4>
+                    <p>武汉市洪山区光谷步行街星巴克隔壁</p>
+                    <b>郑州市</b>
+                    <h4>周黑鸭人民路店</h4>
+                    <p>郑州市人民路与二七路交汇处二七广场天桥下（永乐电器旁）</p>
+                    <h4>周黑鸭中原万达店</h4>
+                    <p>郑州市中原区中原中路万达广场-1楼沃尔玛超市出口处</p>
+                    <b>广州市</b>
+                    <h4>周黑鸭天河南一路店</h4>
+                    <p>广州天河区天河南一路96号101-3铺</p>
+                    <h4>周黑鸭天河直通车店</h4>
+                    <p>广州天河区体育西路54号天河直通车商业广场负一层1B008号</p>
+                    <b>上海市</b>
+                    <h4>周黑鸭五莲路店</h4>
+                    <p>上海市浦东新区五莲路707号1层近张杨北路</p>
+                    <b>南京市</b>
+                    <h4>周黑鸭新街口1店</h4>
+                    <p>南京市地铁二号线新街口站新E32号商铺</p>
+                    <b>长沙市</b>
+                    <h4>周黑鸭步行街二店</h4>
+                    <p>长沙市天心区黄兴南路280-282号对面</p>
+                    <b>重庆市</b>
+                    <h4>周黑鸭南坪万达广场店</h4>
+                    <p>重庆市南岸区南坪街道珊瑚路5号3栋1层8号</p>
+                    <h4>周黑鸭龙湖时代天街店</h4>
+                    <p>重庆市渝中区长江二路174号地铁-UG-C15号商</p>
+                </div>-->
+            </div>
+        </div>
+    </div>
+
+
+    <!--再次参加一次活动页-->
+    <div id="againActivity" class="share-friend huibg again-activty">
+        <div class="prize-text">
+            本次活动一天只能参加一次哦！请明天再来吧！感谢您对岁末狂欢感谢有“粒”活动的关注！
+        </div>
+    </div>
+
+
+    <!--我的奖品页-->
+    <div id="myGetPrize" class="game-rules my-getprize">
+        <!--关闭按钮-->
+        <a id="btn-mygetPrizeClose" class="btn-close" href="javascript:void(0);">
+            <img src="images/btn-close.png"/>
+        </a>
+        <!--我的奖品内容-->
+        <div id="myPrizelist" class="rule-text show-myprize">
+            <img class="ico-gamerule" src="images/ico-myprize.png"/>
+            <section class="game-rule-text">
+                <ul class="prize-list">
+                    <li>
+                        <!--<span class="prize-img fl"><img src="images/ico-christmashat.jpg"/></span>-->
+                        <span class="prize-name fl">获得圣诞帽一顶</span>
+                        <a id="lingqu" class="btn-get fr" href="javascript:void(0);">领取</a>
+                    </li>
+                    <li>
+                        <!--<span class="prize-img fl"><img src="images/ico-usb.jpg"/></span>-->
+                        <span class="prize-name fl">获得U盘一个</span>
+                        <b id="yilingqu" class="btn-get fr yilingqu">已领取</b>
+                    </li>
+                    <li style="padding:0;">
+                        <h1 class="noPrize">你还没有中奖</h1>
+                    </li>
+                </ul>
+                <a id="btnKaquan" class="btn-kaquan" href="javascript:void(0);">购物卡奖券填写信息</a>
+            </section>
+        </div>
+    </div>
+
+    <!--填写用户信息页面-->
+    <div id="userInfo" class="game-rules friend-join add-userInfo">
+        <div class="rule-text">
+            <img class="child-head shakehand" src="images/child.png"/>
+            <section class="friend-text">
+                <h2 class="addhead-title">请填写您的真实信息</h2>
+                <div class="prize-text">
+                    <form action="">
+                        <ul class="userlist">
+                            <li><span>姓&nbsp;&nbsp;名:</span><input type="text" id="username" placeholder="请输入你的姓名..."/></li>
+                            <li><span>会员卡号:</span><input type="text" id="cardNo" placeholder="请输入您的会员卡号..."/></li>
+                            <li><span>手机号码:</span><input type="text" id="phoneNo" placeholder="请输入你的手机号码..."/></li>
+                            <li><span>门&nbsp;&nbsp;店:</span><input type="text" id="storeName" placeholder="请输入门店名称..."/></li>
+                        </ul>
+                        <div id="userSubmit" class="userSubmit"><img src="images/btn-subInfo.png"/></div>
+                    </form>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!--活动结束页面-->
+    <div id="activityConvene"  class="game-rules activity-convene">
+        <!--关闭按钮-->
+        <a id="btn-activityEndClose" class="btn-close" href="javascript:void(0);">
+            <img src="images/btn-close.png"/>
+        </a>
+        <!--好友页面内容-->
+        <div class="rule-text">
+            <section class="game-rule-text friend-text">
+                <!--<img class="ico-convene mb-3p" src="images/ico-activityend.png"/>-->
+                <img class="ico-convene mb-3p" src="images/ico-regret.png"/>
+                <div class="prize-text">
+                    非常遗憾，本次活动已经结束了！感谢您对岁末狂欢感谢有“粒”活动的关注！
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script>
+    var progress_id = "loading";
+    function SetProgress(progress) {
+        if (progress) {
+            $("#progressBar div").css("width", String(progress) + "%"); //控制#loading div宽度
+            $("#progressBar div").html(); //显示百分比
+
+        }
+    }
+    var i = 0;
+    function doProgress() {
+        if (i > 100) {
+            /*$("#message").html("加载完毕！").fadeIn("slow");*///加载完毕提示
+            $("#loading").hide();
+            return;
+        }
+        if (i <= 100) {
+            setTimeout("doProgress()", 100);
+            SetProgress(i);
+            i +=10;
+        }
+    }
+    $(document).ready(function() {
+        doProgress();
+
+        var u = navigator.userAgent, app = navigator.appVersion;
+        var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Linux') > -1; //android终端或者uc浏览器
+        var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+        if (isAndroid) {
+            var windowHeight = document.documentElement.clientHeight;
+            document.body.style.height = windowHeight + 'px';
+        }
+    });
+
+    /*首页：点击活动说明按钮--弹出游戏规则浮层*/
+    $("#btngameRule").click(function () {
+        $("#bodyBg").css("background-image","url('../zhouheiya2/images/bg2.jpg')");
+        $("#gameIndex").hide();//主页
+        $("#gameRules").show();//游戏规则页
+    })
+    /*首页：点击规则页关闭按钮，游戏规则页面隐藏*/
+    $("#btn-ruleClose").click(function () {
+        $("#bodyBg").css("background-image","url('../zhouheiya2/images/bg1.jpg')");
+        $("#gameRules").hide();
+        $("#gameIndex").show();//游戏规则页
+    })
+    /*首页：输入口令按钮操作*/
+    $("#choujiang").click(function () {
+        $("#getPrize").show();
+    })
+    /*首页：点击我的奖品按钮，我的奖品页面显示*/
+    $("#myPrize").click(function () {
+        $("#bodyBg").css("background-image","url('../zhouheiya2/images/bg2.jpg')");
+        $("#gameIndex").hide();
+        $("#myGetPrize").show();
+    })
+
+
+    /*我的奖品页：点击关闭按钮，我的奖品页面隐藏*/
+    $("#btn-mygetPrizeClose").click(function () {
+        $("#bodyBg").css("background-image","url('../zhouheiya2/images/bg1.jpg')");
+        $("#myGetPrize").hide();
+        $("#gameIndex").show();//主页
+    })
+
+    /*我的奖品页：点击购物卡奖券填写信息按钮，弹出用户信息填写页*/
+    $("#btnKaquan").click(function () {
+        $("#userInfo").show();
+        $("#myGetPrize").hide();
+    })
+
+
+    /*领取奖品页：点击立即领取按钮 跳转至好友分享页*/
+    $("#nowgetPrize").click(function () {
+        $("#shareFriend").show();
+        $("#getPrize").hide();
+    })
+
+    /*告知好友页：点击告知好友图层后，则关闭该页面*/
+    $("#shareFriend").click(function () {
+        $("#shareFriend").hide();
+    })
+
+    /*活动结束页：点击关闭按钮，该页面隐藏*/
+    $("#btn-activityEndClose").click(function () {
+        $("#bodyBg").css("background-image","url('../zhouheiya2/images/bg1.jpg')");
+        $("#activityConvene").hide();
+        $("#gameIndex").show();//主页
+    })
+
+    /*验证表单数据*/
+    $("#userSubmit").click(function () {
+        if($("#username").val()==""){
+            alert("姓名不能为空");
+        }else if($("#cardNo").val()==""){
+            alert("会员卡号不能为空");
+        }else if($("#phoneNo").val()==""){
+            alert("手机号码不能为空");
+        }else if($("#storeName").val()==""){
+            alert("门店不能为空");
+        }
+    })
+        
+</script>

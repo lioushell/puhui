@@ -1,0 +1,938 @@
+* {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+html,body{
+    overflow-x:hidden;
+}
+body {
+    padding: 0px;
+    margin: 0px auto;
+    max-width: 640px;
+    font-size: 12px;
+    line-height: 20px;
+    color: #5a5859;
+    font-family: "方正卡通";
+    background: #fafafa;
+    position: relative;
+}
+div {
+    padding: 0;
+    margin: 0;
+    border-width: 0;
+}
+span{
+    margin:0;
+    padding:0;
+}
+ul {
+    padding: 0;
+    margin: 0;
+    border-width: 0;
+    list-style-type: none
+}
+ol {
+    padding: 0;
+    margin: 0;
+    border-width: 0;
+    list-style-type: none
+}
+li {
+    padding: 0;
+    margin: 0;
+    border-width: 0;
+    list-style-type: none
+}
+dl, dt, dd {
+    padding: 0;
+    margin: 0;
+    border-width: 0;
+    list-style-type: none
+}
+img {
+    padding: 0;
+    margin: 0;
+    border-width: 0;
+}
+p {
+    padding: 0;
+    margin: 0;
+    border-width: 0;
+}
+form {
+    padding: 0;
+    margin: 0;
+}
+a {
+    color: #444;
+    text-decoration: none;
+}
+h1,h2,h3,h4,h5,h6{
+    margin:0;
+    padding:0;
+}
+input, select, textarea {
+    outline: none !important;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -o-appearance: none;
+    border-radius: 0;
+    border: none;
+}
+.fl {
+    float: left;
+}
+.fr {
+    float: right;
+}
+.text-c{
+    text-align: center;
+}
+.text-r{
+    text-align: right;
+}
+.mt-10{
+    margin-top:10px;
+}
+.m-5{
+    margin-bottom:5px;
+}
+.mb-10{
+    margin-bottom:10px;
+}
+.mb-3p{
+    margin-bottom:3%;
+}
+.color28{
+    color:#282828!important;
+}
+.clearfloat:after {
+    visibility: hidden;
+    content: "";
+    font-size: 0px;
+    clear: both;
+    height: 0px;
+    display: block;
+}
+.clearfloat {
+    zoom: 1
+}
+.clear {
+    clear: both;
+    font-size: 0px;
+    line-height: 0;
+    height: 0;
+    margin: 0px;
+    padding: 0px;
+}
+.none{display:none;}
+/*游戏加载页面*/
+.loading-bg{
+    width:100%;
+    height:100%;
+    position:fixed;
+    left:0;
+    top:0;
+    background:#000;
+    z-index:999;
+}
+.progress-bar{
+    width:78%;
+    height:37px;
+    padding:0 6%;
+    padding-top:17px;
+    background:url("../images/progressbar-bg.png") no-repeat left top;
+    background-size:100% 100%;
+    position:fixed;
+    left:5%;
+    bottom:25px;
+}
+.jindutiao{
+    width:0%;
+    display:inline-block;
+    height:15px;
+    background: linear-gradient(135deg, #f00 33%,#fff 34%,#fff 59%,#f00 60%); /* W3C */
+    background: -webkit-linear-gradient(135deg, #f00 33%,#fff 34%,#fff 59%,#f00 60%); /* Chrome10+,Safari5.1+ */
+    background-size: 30px 15px;
+    text-align: center;
+    border-radius:15px;
+    color:#fff;
+}
+
+.body-bg{
+    width:100%;
+    height:100%;
+    background: url(../images/bg1.jpg) no-repeat left top;
+    background-size:100% 100%;
+    overflow-x:hidden;
+    position:fixed;
+    left:0;
+    top:0;
+}
+/*雪花背景*/
+.snow-canvas{
+    display:block;
+    width:100%;
+    height:80%;
+    position:absolute;
+    left:0;
+    top:0;
+}
+
+/*首页*/
+.index-bg{
+    width:100%;
+/*    background: url(../images/bg1.jpg) no-repeat left top;
+    background-size:100% 100%;*/
+    position:absolute;
+    left:0;
+    top:0;
+}
+.btn-game-rule{
+    display:block;
+    width:20%;
+    position:absolute;
+    right:3%;
+    top:15px;
+    z-index: 5;
+    overflow:hidden;
+}
+.btn-game-rule img{
+    display:block;
+    width:100%;
+}
+/*.game-title{
+    width:80%;
+    margin:8% auto;
+
+}
+.game-title img{
+    display:block;
+    width:100%;
+}*/
+/*.activity-time{
+    width:40%;
+    height:50px;
+    border:1px solid #ccc;
+    position:fixed;
+    left:30%;
+    top:15%;
+}
+.activity-time p{
+    text-align:center;
+}*/
+.game-cont{
+    width:100%;
+    padding:5% 0;
+    position:fixed;
+    left:0;
+    bottom:18%;
+    z-index: 3;
+}
+.game-cont .cartoon-boy{
+    width:50%;
+    margin:0 10%;
+    z-index:3;
+    position:absolute;
+    left:15%;
+    top:-20%;
+}
+.game-cont .cartoon-car1{
+    width:60%;
+    z-index:5;
+    position:absolute;
+    left:20%;
+    top:43%;
+    z-index:7;
+}
+.game-cont .cartoon-car2{
+    width:80%;
+    z-index:1;
+    margin-left:15%;
+    margin-top:5%;
+}
+.game-cont .write-info{
+    width:30%;
+    height:35px;
+    position:absolute;
+    left:34%;
+    bottom:14%;
+    z-index:8;
+}
+.write-info span{
+    display:block;
+    width:96%;
+    height:35px;
+    padding-left:4%;
+    line-height:35px;
+    background:url("../images/btn-wordInput.png") no-repeat left top;
+    background-size:100% 100%;
+    text-align:center;
+    font-size:14px;
+    color:#a81f24;
+}
+/*.write-info a.btn-sure{
+    width:80%;
+    height:22px;
+    display:block;
+    line-height:22px;
+    background:#f4e4b8;
+    border-radius:3px;
+    text-align:center;
+    color:#ff1f00;
+    margin:12px auto;
+    letter-spacing: 4px;
+}*/
+.btn-prize{
+    display:block;
+    width:45%;
+    height:30px;
+    position:fixed;
+    left:27.5%;
+    bottom:5%;
+}
+.btn-prize img{
+    display:block;
+    width:100%;
+}
+/*圣诞树*/
+.christmas-tree{
+    width:20%;
+    height:30%;
+    background:url("../images/christmasTrees.png") no-repeat left top;
+    background-size:100% 100%;
+    position:fixed;
+    z-index:-1;
+    right:3px;
+    top:34%;
+}
+.christmas-tree .christmas-gift{
+    display:block;
+    width:70%;
+    position:absolute;
+    right:26%;
+    top:23%;
+    animation:mymove 5s infinite;
+    -webkit-animation:zoom 1s infinite; /*Safari and Chrome*/
+}
+
+
+/*游戏规则页*/
+.btn-close{
+    width:15%;
+    height:8%;
+    z-index: 100;
+    position:absolute;
+    right:0;
+    top:0;
+}
+.btn-close img{
+    display:block;
+    width:100%;
+}
+.game-rules{
+    width:100%;
+    height:100%;
+    position:fixed;
+    left:0;
+    top:0;
+/*    background:url("../images/bg2.jpg") no-repeat left top;
+    background-size:100% 100%;*/
+    /*z-index:100;*/
+    display:none;
+}
+.game-rules .rule-text{
+    width:80%;
+    position:fixed;
+    left:10%;
+    top:13%;
+    padding-bottom:5%;
+    background:url("../images/frameBg.png") no-repeat left top;
+    background-size:100% 100%;
+}
+.rule-text .ico-gamerule{
+    width:70%;
+    margin:6% 15%;
+}
+.rule-text .game-rule-text{
+    width:85%;
+    margin:0 auto;
+}
+.rule-text .game-rule-text h2{
+    font-size:15px;
+    color:#282828;
+}
+.rule-text .game-rule-text p{
+    font-size:12px;
+    color:#7b7b7b;
+}
+/*奖品列表*/
+.rule-text .game-rule-text ul{
+    width:100%;
+/*    background:url("../images/prizeText.png") no-repeat 2px top;
+    background-size:90% 100%;
+    height:35%;*/
+}
+.rule-text .game-rule-text ul li{
+    height:20px;
+    line-height:20px;
+}
+.rule-text .game-rule-text ul li span{
+    display:inline-block;
+}
+.rule-text .game-rule-text ul li span.title{
+    font-weight:bold;
+}
+.rule-text .game-rule-text ul li .prize-level{
+    width:15%;
+}
+.rule-text .game-rule-text ul li .prize-name{
+    width:60%;
+}
+.rule-text .game-rule-text ul li .prize-count{
+    width:20%;
+}
+/**/
+.game-rules .rule-prize{
+    left:7%;
+    height:75%;
+    max-height:75%;
+    padding:0 3%;
+    overflow:hidden;
+    position:relative!important;
+    z-index:999;
+}
+.prize-area{
+    position:absolute;
+    left:10%;
+    top:35%;
+    height:60%;
+    overflow-y:auto;
+}
+#ruleText .prize-area{
+    width:80%;
+    top:32%;
+    background:url("../images/ruleText.png") no-repeat 2px top;
+    background-size:100% 100%;
+    height:62%;
+}
+
+
+/*领取奖品页*/
+.huibg{
+    width:100%;
+    height:100%;
+    position:fixed;
+    left:0;
+    top:0;
+    background:rgba(0,0,0,0.7);
+    z-index:10;
+    display:none;
+}
+.get-prize{
+    width:100%;
+    height:100%;
+    display:none;
+}
+.get-prize .twinkle-shine{
+    width:100%;
+    height:45%;
+    margin-top:32%;
+    background:url("../images/shine-aurora.png") no-repeat left top;
+    background-size:100% 100%;
+    animation:wrenching 3s linear infinite;
+    -webkit-animation:wrenching 3s linear infinite;
+    /*position:relative;*/
+}
+.get-prize  .show-prize{
+    width:50%;
+    position:absolute;
+    left:20%;
+    top:32%;
+    z-index: 99;
+    padding:5%;
+    background:url("../images/sm-framebg.png") no-repeat left top;
+    background-size:100% 100%;
+}
+.show-prize .prizeText-cont{
+    width:90%;
+    height:100%;
+    padding:10% 5%;
+    overflow-y:auto;
+    z-index:10;
+    color:#aa0d0d;
+    font-size:14px;
+    text-align:justify;
+}
+.get-prize .prize-explain{
+    position:fixed;
+    top:8%;
+    left:0;
+    width:100%;
+    height:24px;
+    text-align:center;
+    color:#fff;
+}
+.show-prize img{
+    width: 100%;
+}
+.get-prize .twinkle-shine .show-prize img{
+    display:block;
+    width:100%;
+}
+.get-prize  .prize-cont{
+    width:40%;
+    /*height:15%;*/
+    position:absolute;
+    left:30%;
+    top:60%;
+    color:#fff;
+    font-size:14px;
+    font-weight:bold;
+}
+.btn-getprize{
+    display:block;
+    width:45%;
+    height:30px;
+    margin:0 auto;
+    margin-top:17%;
+}
+.btn-getprize img{
+    display:block;
+    width:100%;
+}
+
+
+/*告知好友页*/
+.share-friend{
+    width:100%;
+    height:100%;
+    display:none;
+}
+.share-friend .btn-snowman{
+    display:block;
+    width:45%;
+    position:fixed;
+    right:5%;
+    top:2%;
+}
+.share-friend .prize-text{
+    width:50%;
+    position:fixed;
+    left:20%;
+    bottom:40%;
+    padding:10% 5%;
+    background:url("../images/sm-framebg.png") no-repeat left top;
+    background-size:100% 100%;
+    text-align:justify;
+    line-height:24px;
+    font-size:14px;
+    color:#aa0d0d;
+}
+.share-friend .prize-text .prizeText-cont{
+    width:94%;
+    height:100%;
+    padding:0 3%;
+    overflow-y:auto;
+    z-index:10;
+}
+.share-friend .prize-text a{
+    color:#000;
+}
+.share-friend .prize-text .cont-tips>h4{
+    font-size:12px;
+}
+.share-friend .prize-text .cont-tips>p{
+    color:#7b7b7b;
+    font-size:12px;
+}
+
+/*再次参加一次活动页*/
+.again-activity{
+    display:block;
+}
+.again-activity .prize-text{
+    bottom:40%;
+}
+
+
+/*我的奖品页*/
+.my-getprize{
+    display:none;
+}
+.my-getprize .show-myprize{
+    height:72%;
+    padding:6px;
+}
+.my-getprize .show-myprize section{
+    width:100%;
+}
+.my-getprize .show-myprize ul li{
+    height:48px;
+    padding:2% 2% 2% 4%;
+    padding-bottom:6px;
+    background:url("../images/dashline.png") no-repeat left bottom;
+    position:relative;
+}
+.my-getprize .show-myprize ul li span{
+    display:block;
+    font-size:14px;
+    color:#df3e3e;
+}
+.my-getprize .show-myprize ul li span.prize-img{
+    width:48px;
+    height:48px;
+    margin-right:5px;
+    position:absolute;
+    left:5%;
+    bottom:6px;
+}
+.my-getprize .show-myprize ul li span>img{
+    display:block;
+    width:100%;
+    border-radius:5px;
+}
+
+.my-getprize .show-myprize ul li span.prize-name{
+    width:65%;
+    height:48px;
+    line-height:48px;
+}
+.my-getprize .show-myprize ul li .btn-get,.btn-kaquan{
+    width:25%;
+    height:27px;
+    color:#fff;
+    font-size:14px;
+    line-height:27px;
+    text-align:center;
+    border:1px solid #ccc;
+    border-radius:3px;
+    background:#df3e3e;
+    letter-spacing: 2px;
+    margin-top:10px;
+}
+.my-getprize .show-myprize ul li .yilingqu{
+    background:#8c8c8c;
+    font-weight:normal;
+}
+.noPrize{
+    height:48px;
+    line-height:48px;
+    text-align:center;
+}
+.btn-kaquan{
+    display:block;
+    width:65%;
+    margin:10% auto;
+
+}
+
+/*朋友参与的页面*/
+.friend-join{
+    display:block;
+}
+.friend-join .friend-img{
+    display:block;
+    width:80%;
+    margin:35% auto;
+}
+.friend-join .rule-text,.add-userInfo .rule-text{
+    top:32%;
+    height:53%;
+    background:none;
+}
+.friend-join .rule-text section {
+    top:10%;
+/*    height:50%;*/
+    width:100%;
+    background: url("../images/sm-framebg.png") no-repeat left top;
+    background-size:100% 100%;
+    position:relative;
+    overflow:hidden;
+    z-index:10;
+}
+.friend-join .rule-text .friend-text{
+     height:100%;
+ }
+.rule-text .child-head{
+    position:absolute;
+    width:70%;
+    top:-39%;
+    left:15%;
+    z-index:5;
+}
+.rule-text .child-body{
+    position:absolute;
+    width:70%;
+    top:2%;
+    left:15%;
+}
+.friend-text .ico-convene {
+    width: 50%;
+    position:absolute;
+    left:25%;
+    top:8%;
+}
+.friend-text .prize-text{
+    width:80%;
+    color:#aa0d0d;
+    position:absolute;
+    left:7%;
+    top:27%;
+    overflow-y:auto;
+    height:70%;
+    padding:0 3%;
+}
+.cont-tips>b{
+    display:block;
+    margin-top:8px;
+    margin-bottom:4px;
+    font-size:14px;
+}
+.cont-tips>h4{
+    font-weight:normal;
+}
+.cont-tips>p{
+    text-indent:12px;
+}
+
+/*填写用户新消息*/
+.add-userInfo{
+    width:100%;
+    height:100%;
+    position:fixed;
+    left:0;
+    top:0;
+    background:rgba(0,0,0,.8);
+    z-index:10;
+    display:none;
+}
+.add-userInfo .addhead-title{
+    width: 80%;
+    position: absolute;
+    left: 10%;
+    top: 8%;
+    text-align:center;
+    color:#aa0d0d!important;
+}
+.add-userInfo .prize-text{
+    top:20%;
+}
+.userlist li{
+    background:url("../images/hengline.png") no-repeat left bottom;
+    background-size:100% 1px;
+    padding-left:32%;
+    padding-bottom:1%;
+    position:relative;
+    margin-bottom:10px;
+    font-size:14px;
+    color:#2b2b2b;
+}
+.userlist li span{
+    position:absolute;
+    left:2px;
+    top:5px;
+}
+.userlist li input{
+    width:98%;
+    padding-left:2%;
+    height:24px;
+    background-color:transparent;
+    outline: none;
+}
+.userSubmit{
+    width:50%;
+    height:32px;
+    margin:0 auto;
+    margin-top:10%;
+    border-radius:3px;
+}
+.userSubmit img{
+    width:100%;
+    height:32px;
+    text-align:center;
+    color:transparent;
+    outline: none;
+    background:url("../images/btn-subInfo.png") no-repeat left top;
+    background-size:100% 100%;
+}
+
+/*活动结束页*/
+.friend-bg{
+    background:url("../images/bg2.jpg") no-repeat left top;
+    background-size:100% 100%;
+    z-index:100;
+}
+.activity-convene{
+    display:none;
+}
+.activity-convene .rule-text{
+    background: url("../images/activityendbg.png") no-repeat left top;
+    background-size:100% 100%;
+    height:70%;
+}
+.activity-convene .ico-convene {
+    width: 50%;
+    position: absolute;
+    left: 25%;
+    top: 47%;
+}
+.activity-convene .prize-text {
+    top: 60%;
+    font-size:14px;
+    text-align:justify;
+}
+
+/*动画*/
+/*图片闪烁放大缩小*/
+@keyframes zoom
+{
+    from {
+        width:60%;
+    }
+    to {
+        width:65%;
+        right:23%;
+    }
+}
+@-webkit-keyframes zoom /*Safari and Chrome*/
+{
+    from {
+        width:60%;
+    }
+    to {
+        width:65%;
+        right:23%;
+        top:22%;
+    }
+}
+
+/*图片从小变大*/
+.m-zoomBig {z-index:4; -webkit-animation:m-zoomBig 1s linear 0s; animation:m-zoomBig 1s linear 0s;opacity: 0;
+    -webkit-animation-fill-mode: forwards; animation-fill-mode: forwards;}
+@-webkit-keyframes m-zoomBig{
+    0%{ transform:scale(0,0) -webkit-transform: scale(0,0) ; opacity: 1;}
+    50%{ transform: scale(0.5,0.5) ;-webkit-transform: scale(0.5,0.5) ; opacity: 1;}
+    100%{ transform: scale(1,1);-webkit-transform: scale(1,1); opacity: 1;}
+}
+@keyframes m-zoomBig{
+    0%{ transform: scale(0,0);-webkit-transform: scale(0,0); opacity: 1;}
+    50%{ transform: scale(0.5,0.5);-webkit-transform: scale(0.5,0.5); opacity: 1;}
+    100%{ transform: scale(1,1);-webkit-transform: scale(1,1); opacity: 1;}
+}
+
+.shakehand { -webkit-animation:shakehand 1s linear 0.5s infinite alternate; animation:shakehand 1s linear 0.5s infinite alternate; }
+@-webkit-keyframes shakehand{
+    0%{-webkit-transform: rotate(-15deg);
+        transform: rotate(-15deg);}
+    50%{-webkit-transform: rotate(0deg);
+        transform:  rotate(0deg);}
+    100%{-webkit-transform:  rotate(5deg);
+        transform: rotate(5deg);}
+}
+@keyframes shakehand{
+    0%{-webkit-transform: rotate(-15deg);
+        transform: rotate(-15deg);}
+    50%{-webkit-transform: rotate(0deg);
+        transform:  rotate(0deg);}
+    100%{-webkit-transform:  rotate(5deg);
+        transform: rotate(5deg);}
+}
+
+/*背景音乐*/
+.m-music{position:fixed;bottom:10px;right:10px;width:30px;height:30px;z-index: 1000;}
+.m-music .icon-music{display:block;width:30px;height:30px; background:url(../images/ico-music.png) left top no-repeat;background-size:30px 30px;}
+.m-music.m-play .icon-music{-webkit-animation:wrenching 2s linear infinite; animation:wrenching 2s linear infinite; background:url(../images/ico-music.png) left top no-repeat;background-size:30px 30px;}
+@-webkit-keyframes wrenching{
+    0%{
+        -webkit-transform:rotate(0deg);
+        -moz-transform:rotate(0deg);
+        -o-transform:rotate(0deg);
+        transform:rotate(0deg);
+    }
+    100%{
+        -webkit-transform:rotate(360deg);
+        -moz-transform:rotate(360deg);
+        -o-transform:rotate(360deg);
+        transform:rotate(360deg);
+    }
+}
+@keyframes wrenching{
+    0%{
+        -webkit-transform:rotate(0deg);
+        -moz-transform:rotate(0deg);
+        -o-transform:rotate(0deg);
+        transform:rotate(0deg);
+    }
+    100%{
+        -webkit-transform:rotate(360deg);
+        -moz-transform:rotate(360deg);
+        -o-transform:rotate(360deg);
+        transform:rotate(360deg);
+    }
+}
+
+
+/* Apple IPhone 4 */
+@media only screen
+and (min-device-height : 460px)
+and (max-device-height : 500px)
+and (-webkit-min-device-pixel-ratio: 2)
+and (-webkit-max-device-pixel-ratio: 2)
+and (orientation : portrait) {
+    .write-info span{
+        height:30px;
+        line-height:30px;
+    }
+    .game-rules .rule-text{
+        padding-bottom:3%;
+    }
+/*    .my-getprize .show-myprize ul li{
+        padding-left:26%;
+    }*/
+    .rule-text .child-head {
+        top: -48%;
+    }
+}
+
+/* Apple IPhone 5 */
+@media only screen
+and (min-device-height : 558px)
+and (max-device-height : 578px)
+and (-webkit-min-device-pixel-ratio: 1.8)
+and (-webkit-max-device-pixel-ratio: 2.2)
+and (orientation : portrait) {
+    .write-info span{
+        height:30px;
+        line-height:30px;
+    }
+/*    .my-getprize .show-myprize ul li{
+        padding-left:26%;
+    }*/
+    .rule-text .child-head {
+        top: -37%;
+    }
+}
+
+/* Android 三星 S4 */
+@media only screen
+and (min-device-height : 620px)
+and (max-device-height : 660px)
+and (-webkit-min-device-pixel-ratio: 2.6)
+and (-webkit-max-device-pixel-ratio: 3.4)
+and (orientation : portrait) {
+    .rule-text .child-head {
+        top: -37%;
+    }
+}
+
+/* Android Nexus 5 */
+@media only screen
+and (min-device-height : 547px)
+and (max-device-height : 587px)
+and (-webkit-min-device-pixel-ratio: 2.6)
+and (-webkit-max-device-pixel-ratio: 3.4)
+and (orientation : portrait) {
+    .rule-text .child-head {
+        top: -43%;
+    }
+}
