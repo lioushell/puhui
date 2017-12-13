@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>跨年狂欢，财神驾到</title>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1, target-densitydpi=medium-dpi, user-scalable=no">
+    <meta name="Keywords" content="微播、微信营销、微信代运营、微信定制开发、微信托管、微网站、微商城、微营销"/>
+    <meta name="Description" content="微播，国内最大的微信公众智能服务平台，微播八大微体系：微菜单、微官网、微会员、微活动、微商城、微推送、微服务、微统计，企业微营销必备。"/>
+    <!--<base href="../../../static/game/puhui/">-->
+    <!-- <base href="http://st.wboll.com/static/wboll_game/static/game/puhui/"> -->
+    <base href="./">
+
+    <link rel="stylesheet" type="text/css" href="css/style.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style1.min.css">
+</head>
+<body>
+<a href="javascript:void(0);" class="m-music m-play" id="music">
+    <i class="icon-music"></i>
+    <audio src="images/music.mp3" id="J_audio" autoplay="autoplay" loop="loop"></audio>
+</a >
+
+<!--===============================  广告  ==============================-->
+<div class="guanggao">
+</div>
+
+<!--===============================  关注  ==============================-->
+<div class="gz none" id="guanzhu" style="z-index: 10000">
+    <div class="index-lh">
+        <img src="images/index-yh.png"/>
+    </div>
+    <div class="gz-img">
+        <img src="images/gz-bg.png" class="gz-bg"/>
+        <img src="images/code.jpg" class="code" style="z-index:20000;"/>
+        <p class="gz-p">长按二维码关注我们</p >
+    </div>
+</div>
+
+<!--===============================  首页  ==============================-->
+<div class="index ">
+    <div class="index-lh">
+        <img src="images/index-yh.png"/>
+    </div>
+    <div class="start-img">
+        <img src="images/index-img.png"/>
+    </div>
+    <div class="start-btn">
+        <img src="images/start-btn.png"/>
+    </div>
+</div>
+
+<!--===============================  规则  ==============================-->
+<div class="pgBox pgGz rule none" >
+    <div class="rule-con">
+        <img src="images/rule-con.png"/>
+    </div>
+    <div class="timecount">
+        <img src="images/timecount.png"/>
+        <p class="count" id="count">5</p>
+    </div>
+</div>
+
+<!--=====================  游戏页  ======================-->
+<section class="pgBox pgGames ">
+    <div class="topMenu clearfloat">
+        <div class="score fr" style="display:block;">
+            <img src="images/score.png">
+            <span class="scoreVal scoreVal-score">0</span>
+        </div>
+        <div class="timeDj fl">
+            <img src="images/time.png">
+            <div class="time-con">
+                <span id="timeDjVal">30</span><span class="">s</span>
+            </div>
+        </div>
+    </div>
+
+    <!--    <div class="tckBox tckZhufu" style="display:none;">
+            <h3></h3>
+        </div>-->
+
+    <div class="redBox">
+        <ul><li></li></ul>
+        <div class="clear"></div>
+    </div>
+
+</section>
+
+<!--=====================  未达到分数 没有拆红包  ======================-->
+<div class="alert alert-wl none">
+    <div class="hongbao-bg">
+        <img src="images/hongbao.jpg"/>
+        <p class="hongbao-p">太遗憾了，您只击中了<span class="hb-span scoreVal"> </span>个奖品，再接再厉吧！</p>
+    </div>
+    <div class="btm-btn clearfloat">
+        <div class="again-btn playagain fl"><img src="images/again.png"/> </div>
+        <div class="share-btn fr"><img src="images/share.png"/> </div>
+    </div>
+</div>
+
+<!--=====================  红包弹窗页面  ======================-->
+<div class="alert alert-hongbao none">
+    <div class="hongbao-bg">
+        <img src="images/hongbao.jpg"/>
+        <p class="hongbao-p hongbao-p1">恭喜，您一共击中了
+            <span class="hb-span scoreVal"> </span>件奖品，很不错哦，马上去拆红包吧！
+        </p>
+        <div class="chai" id="getprize">
+            <img src="images/chai.png"/>
+        </div>
+    </div>
+    <div class="btm-btn clearfloat">
+        <div class="again-btn playagain fl"><img src="images/again.png"/> </div>
+        <div class="share-btn fr"><img src="images/share.png"/> </div>
+    </div>
+</div>
+
+
+<!--=====================  拆红包  ======================-->
+<div class="alert alert-chai none">
+    <div class="hongbao-bg">
+        <img src="images/jiguang.png" class="jiguang"/>
+        <img src="images/open-hb.png"/>
+        <!-- <p class="hongbao-p score-p">
+             恭喜，您一共点击了<span class="hb-span scoreVal-count">  </span>件奖品，对应积分是<span class="hb-score scoreVal-score">  </span>分，可兑换现金金额为<span class="hb-money"> 15.2</span>元的红包
+         </p>-->
+        <p class="hongbao-p score-p">
+            恭喜，您获得一个<span class="hb-money"></span>元的红包，赶紧去领取吧！
+        </p>
+        <div class="chai" id='gethongbao'>
+            <img src="images/lq-btn.png"/>
+        </div>
+    </div>
+</div>
+
+<!--=====================  中奖之后， 再次打开连接  ======================-->
+<div class="alert alert-opened none">
+    <div class="hongbao-bg">
+        <img src="images/jiguang.png" class="jiguang"/>
+        <img src="images/open-hb.png"/>
+        <p class="hongbao-p score-p">
+            恭喜，您一共击中了<span class="hb-span scoreVal-count"> </span>件奖品。好厉害哦！
+        </p>
+    </div>
+    <div class="btm-btn clearfloat">
+        <div class="again-btn playagain fl"><img src="images/again.png"/> </div>
+        <div class="share-btn fr"><img src="images/share.png"/> </div>
+    </div>
+</div>
+
+<!--=====================  分享  ======================-->
+<div class="share none">
+    <img src="images/share-ft1.png" class="share-ft"/>
+</div>
+<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script>
+
+    function getCookie(cookieName) {
+        var strCookie = document.cookie;
+        var arrCookie = strCookie.split("; ");
+        for(var i = 0; i < arrCookie.length; i++){
+            var arr = arrCookie[i].split("=");
+            if(cookieName == arr[0]){
+                return arr[1];
+            }
+        }
+        return "";
+    }
+    var subscribe = getCookie('subscribe');
+    var myname = decodeURI(getCookie("nickname"));
+    var user = {};
+    user.openid = getCookie("openid");
+    var isget = getCookie('isget')
+
+    if(!Number(subscribe)){
+        $('#guanzhu').show()
+    }
+
+    var myurl="http://game.wboll.com/node/puhui";
+
+
+</script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+
+<script src="js/main.js"></script>
+<script>
+    $("")
+    var configs = "";
+
+
+  /*  $.ajax({
+        url:myurl+'/signature',
+        async: false,
+        type: "GET",
+        dataType: 'json',
+        success: function (result) {
+            configs = result
+        }
+    });*/
+
+    wx.config({
+        debug: false,
+        appId: configs.appid,
+        timestamp: configs.timestamp,
+        nonceStr: configs.nonceStr,
+        signature: configs.signature,
+        jsApiList: [ "onMenuShareAppMessage","onMenuShareTimeline" ] // 功能列表，我们要使用JS-SDK的什么功能
+    });
+    wx.error(function (res) {
+        location.reload(true);
+    });
+
+    var imgUrl = "http://st.wboll.com/static/wboll_game/static/game/puhui/images/tit.jpg";
+    var lineLink = "http://game.wboll.com/node/puhui/index";
+    var descContent = '跨年狂欢，财神驾到  ';
+    var shareTitle = '千万礼包闪不停，不动手指真不行';
+
+    wx.ready(function () {
+        wx.onMenuShareAppMessage({
+            title:descContent, // 分享标题
+            desc:shareTitle, // 分享描述
+            link: lineLink, // 分享链接,
+            type:"link",
+            imgUrl:imgUrl, // 分享图标
+            success: function () {
+
+            },
+            cancel: function () {
+
+            }
+        });
+
+        wx.onMenuShareTimeline({
+            title:descContent, // 分享标题
+            link: lineLink, // 分享链接
+            imgUrl:imgUrl, // 分享图标
+            success: function () {
+                // 用户确认分享后执行的回调函数
+
+            },
+            cancel: function () {
+                // 用户取消分享后执行的回调函数
+            }
+        });
+
+    });
+
+    $('#packet').on('touchstart',function(){
+
+    });
+
+ /*   $.ajax({
+        url:myurl+'/pv?openid='+user.openid+'&nickname='+user.nickName,
+        type: "GET",
+        dataType: 'json',
+        success: function (result) {
+
+        }
+    })*/
+    $('#gethongbao').on('touchstart',function(){
+        window.location.reload(true);
+    })
+
+</script>
+
+</body>
+</html>
